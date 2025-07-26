@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ファイルアップロード</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* パステルカラーの背景 */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* かわいらしいフォント */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 36px;
+            color: #ff69b4; /* ピンク色のタイトル */
+            margin-top: 50px;
+        }
+        form {
+            margin-top: 30px;
+        }
+        input[type="file"] {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #ff69b4; /* ピンク色のボタン */
+            border: none;
+            border-radius: 25px; /* 丸みを帯びたボタン */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影をつけて立体感を出す */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* ホバー時の色変化をスムーズに */
+        }
+        button:hover {
+            background-color: #ff1493; /* ホバー時に少し濃いピンク色に変更 */
+        }
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 18px;
+            background-color: #fffacd; /* 淡い黄色の背景 */
+            border: 2px solid #ff69b4; /* ピンク色のボーダー */
+            border-radius: 15px; /* 丸みを帯びたボックス */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影をつけて立体感を出す */
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>ファイルアップロード</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file">
+        <button type="submit">アップロード</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        <h2>診断結果:</h2>
+        <pre>{{ result }}</pre>
+    </div>
+    {% endif %}
+</body>
+</html>

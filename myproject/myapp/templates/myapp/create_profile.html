@@ -1,0 +1,15 @@
+<!-- templates/create_profile.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>プロフィール作成</title>
+</head>
+<body>
+    <h1>プロフィール作成</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">作成</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* ヘッダーのスタイル */
+header {
+    margin-bottom: 20px;
+}
+
+/* かわいらしいタイトルのスタイル */
+.cute-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #ff69b4; /* ピンク色 */
+    text-shadow: 2px 2px #ffb6c1; /* 薄いピンクの影 */
+    border: 2px solid #ff69b4; /* ピンクのボーダー */
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #fff0f5; /* 薄いピンクの背景色 */
+}
+
+/* ボタンコンテナのスタイル */
+.button-container {
+    display: flex;
+    gap: 20px;  /* ボタン間のスペース */
+}
+
+/* ボタンの基本スタイル */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;  /* ホバースタイルへのアニメーション */
+}
+
+/* ボタンのホバースタイル */
+button:hover {
+    background-color: #0056b3;
+}
